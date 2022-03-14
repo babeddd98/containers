@@ -1,23 +1,23 @@
 import mysql.connector
-import subprocess
+# import subprocess
 
-def get_ip():
-    CMD = 'bash script/ingress_ip.sh'
-    p = subprocess.Popen(CMD, stdout=subprocess.PIPE, shell=True, executable='/bin/bash')
-    return p.stdout.readlines()[0].strip().decode()
+# def get_ip():
+#     CMD = 'bash script/ingress_ip.sh'
+#     p = subprocess.Popen(CMD, stdout=subprocess.PIPE, shell=True, executable='/bin/bash')
+#     return p.stdout.readlines()[0].strip().decode()
 
-def get_port():
-    CMD = 'bash script/db_port.sh'
-    p = subprocess.Popen(CMD, stdout=subprocess.PIPE, shell=True, executable='/bin/bash')
-    return p.stdout.readlines()[0].strip().decode()
+# def get_port():
+#     CMD = 'bash script/db_port.sh'
+#     p = subprocess.Popen(CMD, stdout=subprocess.PIPE, shell=True, executable='/bin/bash')
+#     return p.stdout.readlines()[0].strip().decode()
 
-host = get_ip()
-port = get_port()
-print(host)
-print(port)
+# host = get_ip()
+# port = get_port()
+# print(host)
+# print(port)
 
 connection_params = {
-    'host': host,
+    'host': '172.25.96.162',
     'port': '31737',
     'user': "root",
     'password': "hello",
