@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CAC40 Stocks Dataset &#x1F4C8; | Kaggle</title>
+  <meta charset="utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Daily and updated CAC40 stocks from 2010 to 2021" />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="keywords" content="business,banking,time series analysis,europe,datetime" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==" type="text/javascript">
+    window["pageRequestStartTime"] = 1646400907057;
+    window["pageRequestEndTime"] = 1646400907203;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="/bryanb/cac40-stocks-dataset" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=1f6d99669e949b7dfa2b" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=6d469c8f203f872b41ae" />
+  
+    
+ 
+      <script nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-12629138-1', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==" async src="https://www.googletagmanager.com/gtag/js?id=UA-12629138-1"></script>
+
+  
+    
+        <meta property="og:url" content="https://kaggle.com/bryanb/cac40-stocks-dataset" />
+        <meta property="og:title" content="CAC40 Stocks Dataset &#x1F4C8;" />
+        <meta property="og:description" content="Daily and updated CAC40 stocks from 2010 to 2021" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-card.jpg?t=2020-04-05-14-57-08" />
+        <meta property="fb:app_id" content="2665027677054710" />
+
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@kaggledatasets" />
+            <meta name="twitter:creator" content="@boulebryan" />
+    
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+        <script nonce="847QPyXL4d8VUaGRLOJ+/g==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"CAC40 Stocks Dataset 📈","description":"## **CAC40**\n\n&gt; CAC40, previously known as Bourse de Paris, is a benchmark French stock market index. The index represents a capitalization-weighted measure of the 40 most significant stocks among the 100 largest market caps on the Euronext Paris. Its acronym stands for Cotation Assistée en Continu, which translates to continuous assisted trading, and is used as a benchmark index for funds investing in the French stock market.\n\nIdeal to : \n* Practise EDA applied to time series\n* Make use of statistical tests to check stationarity (Dickey-Fuller test...)\n* Get more familiar with Akaike information criterion, estimator of out-of-sample prediction error\n* Learn how to tune autoARIMA models\n* Setup a forecasting strategy on stocks\n* Segmentation\n* Identify stress periods specific to an industry\n\n## **References**\n* This dataset is scrapped from a <a href=\"https://markets.businessinsider.com/index/components/cac_40\">finance website</a>. It contains all daily CAC40 Stocks from 2010 to 2021.\n* CAC40 <a href=\"https://www.investopedia.com/terms/c/cac40.asp\">documentation</a>\n\n## Enjoy\nHope you can make good use of this dataset\n\n&gt; If you have found some way to educate yourself about engineering, stocks or whatever it is, good employers will have some type of exam or interview and see a sample of your work\n*Bill Gates*","url":"https://www.kaggle.com/bryanb/cac40-stocks-dataset","version":17,"keywords":["subject, people and society, business","subject, people and society, business, finance, banking","technique, time series analysis","geography and places, europe","packages, datetime"],"license":{"@type":"CreativeWork","name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"identifier":["588108"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"BryanB","url":"https://www.kaggle.com/bryanb","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/bryanb/cac40-stocks-dataset/download","contentSize":"2585907 bytes"}],"commentCount":1,"dateModified":"2021-05-28T21:28:25.207Z","discussionUrl":"https://www.kaggle.com/bryanb/cac40-stocks-dataset/discussion","alternateName":"Daily and updated CAC40 stocks from 2010 to 2021","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-card.jpg?t=2020-04-05-14-57-08","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":1},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":654},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":5316},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":33}]}</script>
+    
+
+  
+    
+        <link rel="alternate" type="application/json+oembed"
+            href="https://www.kaggle.com/oembed/dataset?url=https%3A%2F%2Fwww.kaggle.com%2Fbryanb%2Fcac40-stocks-dataset"
+            title="CAC40 Stocks Dataset &#x1F4C8;" />
+    
+
+  
+    
+    
+<script nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+
+    Kaggle.Current = {
+        antiForgeryToken: 'CfDJ8LdUzqlsSWBPr4Ce3rb9VL_yOrtHfgCA1K7Ca6N-3ef1xweKMH_yF_D_atyIHo8XW1kskCYAo4wls_Oe71QfSpyN3llY0Tg01akD174wovb9IZyGSiy4aIpY8iOqtghBsgxaEtbf26h8n3IiQXcsbNw',
+        isAnonymous: true,
+        analyticsToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDY0MDE4MDcsIlVzZXJJZCI6MH0.fpBJT143QFAtF6oVIt8TshOcDJxdzQU3xpD2Gd7aNmI',
+        analyticsTokenExpiry: 15,
+        
+        
+        
+        
+        
+        
+        
+        enableRapidash: true, 
+    }
+        Kaggle.Current.log = function(){};
+        Kaggle.Current.warn = function(){};
+
+    var decodeUserDisplayName = function () {
+        var escapedUserDisplayName = Kaggle.Current.userDisplayNameEscaped || "";
+        try {
+            var textVersion = new DOMParser().parseFromString(escapedUserDisplayName, "text/html").documentElement.textContent;
+            if (textVersion) {
+                return textVersion;
+            }
+        } catch(ex) {}
+        return escapedUserDisplayName;
+    }
+    Kaggle.Current.userDisplayName = decodeUserDisplayName();
+</script>
+
+    
+
+<script nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+    Kaggle.PageMessages = [];
+</script>
+
+
+
+    <script nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="847QPyXL4d8VUaGRLOJ+/g==" src="/static/assets/runtime.js?v=a7ce158f648631ace6ab" data-turbolinks-track="reload"></script>
+  <script nonce="847QPyXL4d8VUaGRLOJ+/g==" src="/static/assets/vendor.js?v=a2004e5f19533473e100" data-turbolinks-track="reload"></script>
+  <script nonce="847QPyXL4d8VUaGRLOJ+/g==" src="/static/assets/app.js?v=014ec5d3f56e194a39f4" data-turbolinks-track="reload"></script>
+    <script nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+
+<div id="site-container"></div>
+<div data-component-name="NavigationContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="847QPyXL4d8VUaGRLOJ+/g==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"navigationType":"BOTH_NAV"});performance && performance.mark && performance.mark("NavigationContainer.componentCouldBootstrap");</script>
+<div id="site-body" class="hide">
+    
+
+
+<div data-component-name="DatasetContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="847QPyXL4d8VUaGRLOJ+/g==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"title":"CAC40 Stocks Dataset \uD83D\uDCC8","slug":"cac40-stocks-dataset","licenseId":1,"data":{"firestorePath":"Zzj1OFLsXdzpvrG22sSb/versions/isJhHWAv9wzjGDBMmVyc","databundleVersionId":2322066,"databundle":{"type":"OBJECT_TYPE_DATABUNDLE","key":"Zzj1OFLsXdzpvrG22sSb","path":"Zzj1OFLsXdzpvrG22sSb","legacyEntityId":607205,"relativeUrl":"","name":"CAC40 Stocks dataset","databundleInfo":{"currentDatabundleVersionId":2322066,"databundleType":"DATABUNDLE_TYPE_DATASET","diffType":"VERSIONED","creationDate":"2020-04-05T14:54:43.324965200Z","creatorUserId":754781,"currentGoodVersionKey":"isJhHWAv9wzjGDBMmVyc","lastestVersionKey":"isJhHWAv9wzjGDBMmVyc","versions":{"totalChildren":17}},"datasetInfo":{"datasetId":588108,"datasetSlug":"/bryanb/cac40-stocks-dataset"}},"databundleVersion":{"type":"OBJECT_TYPE_DATABUNDLE_VERSION","key":"isJhHWAv9wzjGDBMmVyc","path":"Zzj1OFLsXdzpvrG22sSb/versions/isJhHWAv9wzjGDBMmVyc","legacyEntityId":2322066,"relativeUrl":"","name":"Version 17","description":"up","databundleVersionInfo":{"versionNumber":17,"versionNotes":"up","creatorUserId":754781,"creationDate":"2021-05-28T21:28:25.236661100Z","databundleVersionType":"FILESET"},"datasetVersionInfo":{"datasetVersionId":2280921},"statusInfo":{"status":"DATABUNDLE_STATUS_READY","statusMessage":"Ready","percentageCompleted":1},"exceptionInfo":{},"filesetInfo":{"totalSize":14403711,"directories":{},"files":{"totalChildren":2}},"bundleCompressionInfo":{"filename":"archive.zip","fileExtension":".zip","fileSize":2585907,"contentEncoding":"application/zip","contentMd5":"l7VsTyQ6XFaM9/DPgd3IwA==","archiveGcsUrl":"gs://kaggle-data-sets/588108/2280921/bundle/archive.zip","creationLastUpdate":"2021-05-28T21:28:30.141363300Z","creationPercentComplete":1},"storageInfo":{"uploadDataLocation":{"bucket":"kaggle-data-sets","path":"588108/2280921/upload"},"rawDataLocation":{"bucket":"kagglesdsdata","path":"datasets/588108/2280921"},"individualCompressedLocation":{"bucket":"kaggle-data-sets","path":"588108/2280921/compressed"},"bundleArchiveLocation":{"bucket":"kaggle-data-sets","path":"588108/2280921/bundle/archive.zip"},"fileSystemLocation":{"bucket":"kaggle-data-sources","path":"datasets/588108/2280921/fs/embedded_fs"}},"fileSummaryInfo":{"totalFileCount":2,"fileTypes":[{"extension":".csv","fileCount":2,"totalSize":14403711}],"sampleFileNames":["preprocessed_CAC40.csv","CAC40_stocks_2010_2021.csv"]},"columnSummaryInfo":{"totalColumnCount":16,"columnTypes":[{"columnType":"Decimal","columnCount":10,"rowCount":896915},{"columnType":"String","columnCount":3,"rowCount":261118},{"columnType":"DateTime","columnCount":2,"rowCount":179383},{"columnType":"Integer","columnCount":1,"rowCount":97648}],"sampleColumnNames":["StockName","CompanyName","Volume","Daily_Low","Daily_High","Closing_Price","Open","Date","Name",""]}}},"owner":{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb","userTier":"MASTER"},"licenseGroups":[{"id":1,"name":"Creative Commons","licenses":[{"id":1,"name":"CC0: Public Domain","description":"CC0: Public Domain \u003Ca href=\u0022https://creativecommons.org/publicdomain/zero/1.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/publicdomain/zero/1.0/","displaySequence":1},{"id":3,"name":"CC BY-NC-SA 4.0","description":"CC BY-NC-SA 4.0 \u003Ca href=\u0022https://creativecommons.org/licenses/by-nc-sa/4.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/licenses/by-nc-sa/4.0/","displaySequence":2},{"id":8,"name":"CC BY-SA 4.0","description":"CC BY-SA 4.0 \u003Ca href=\u0022https://creativecommons.org/licenses/by-sa/4.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/licenses/by-sa/4.0/","displaySequence":3},{"id":10,"name":"CC BY-SA 3.0","description":"CC BY-SA 3.0 \u003Ca href=\u0022https://creativecommons.org/licenses/by-sa/3.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/licenses/by-sa/3.0/","displaySequence":4},{"id":13,"name":"Attribution 4.0 International (CC BY 4.0)","description":"CC-BY 4.0 \u003Ca href=\u0022https://creativecommons.org/licenses/by/4.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/licenses/by/4.0/","displaySequence":5},{"id":14,"name":"Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)","description":"CC-BY-NC 4.0 \u003Ca href=\u0022https://creativecommons.org/licenses/by-nc/4.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/licenses/by-nc/4.0/","displaySequence":6},{"id":16,"name":"Attribution 3.0 Unported (CC BY 3.0)","description":"CC BY 3.0 \u003Ca href=\u0022https://creativecommons.org/licenses/by/3.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/licenses/by/3.0/","displaySequence":7},{"id":17,"name":"Attribution 3.0 IGO (CC BY 3.0 IGO)","description":"CC BY 3.0 IGO \u003Ca href=\u0022https://creativecommons.org/licenses/by/3.0/igo/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/licenses/by/3.0/igo/","displaySequence":8},{"id":19,"name":"Attribution-NonCommercial-ShareAlike 3.0 IGO (CC BY-NC-SA 3.0 IGO)","description":"CC BY-NC-SA 3.0 IGO \u003Ca href=\u0022https://creativecommons.org/licenses/by-nc-sa/3.0/igo/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/","displaySequence":9},{"id":22,"name":"Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)","description":"CC BY-ND 4.0 \u003Ca href=\u0022https://creativecommons.org/licenses/by-nd/4.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/licenses/by-nd/4.0/","displaySequence":10},{"id":23,"name":"Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)","description":"CC BY-NC-ND 4.0 \u003Ca href=\u0022https://creativecommons.org/licenses/by-nc-nd/4.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/licenses/by-nc-nd/4.0/","displaySequence":11}],"displaySequence":1},{"id":2,"name":"GPL","licenses":[{"id":9,"name":"GPL 2","description":"GPL 2 \u003Ca href=\u0022http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html","displaySequence":1},{"id":25,"name":"GNU Lesser General Public License 3.0","description":"LGPL 3.0 \u003Ca href=\u0022http://www.gnu.org/licenses/lgpl-3.0.html\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"http://www.gnu.org/licenses/lgpl-3.0.html","displaySequence":2},{"id":26,"name":"GNU Affero General Public License 3.0","description":"AGPL 3.0 \u003Ca href=\u0022http://www.gnu.org/licenses/agpl-3.0.html\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"http://www.gnu.org/licenses/agpl-3.0.html","displaySequence":3},{"id":27,"name":"GNU Free Documentation License 1.3","description":"FDL 1.3 \u003Ca href=\u0022http://www.gnu.org/licenses/fdl-1.3.html\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"http://www.gnu.org/licenses/fdl-1.3.html","displaySequence":4}],"displaySequence":2},{"id":3,"name":"Open Data Commons","licenses":[{"id":5,"name":"Database: Open Database, Contents: Database Contents","description":"Database: Open Database \u003Ca href=\u0022http://opendatacommons.org/licenses/odbl/1.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E, Contents: Database Contents \u003Ca href=\u0022http://opendatacommons.org/licenses/dbcl/1.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"http://opendatacommons.org/licenses/dbcl/1.0/","displaySequence":1},{"id":6,"name":"Database: Open Database, Contents: \u00A9 Original Authors","description":"Database: Open Database \u003Ca href=\u0022http://opendatacommons.org/licenses/odbl/1.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E, Contents: \u00A9 Original Authors","url":"http://opendatacommons.org/licenses/odbl/1.0/","displaySequence":2},{"id":15,"name":"ODC Public Domain Dedication and Licence (PDDL)","description":"PDDL  \u003Ca href=\u0022https://opendatacommons.org/licenses/pddl/1.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://opendatacommons.org/licenses/pddl/1.0/","displaySequence":3},{"id":24,"name":"ODC Attribution License (ODC-By)","description":"ODC-BY 1.0 \u003Ca href=\u0022https://opendatacommons.org/licenses/by/1-0/index.html\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://opendatacommons.org/licenses/by/1-0/index.html","displaySequence":4}],"displaySequence":3},{"id":6,"name":"Community Data License","licenses":[{"id":20,"name":"Community Data License Agreement - Permissive - Version 1.0","description":"CDLA Permissive 1.0 \u003Ca href=\u0022https://cdla.io/permissive-1-0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://cdla.io/permissive-1-0/","displaySequence":1},{"id":21,"name":"Community Data License Agreement - Sharing - Version 1.0","description":"CDLA Sharing 1.0 \u003Ca href=\u0022https://cdla.io/sharing-1-0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://cdla.io/sharing-1-0/","displaySequence":2}],"displaySequence":4},{"id":4,"name":"Special","licenses":[{"id":7,"name":"World Bank Dataset Terms of Use","description":"World Bank Dataset Terms of Use \u003Ca href=\u0022https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets","displaySequence":1},{"id":2,"name":"Reddit API Terms","description":"Reddit API Terms \u003Ca href=\u0022https://www.reddit.com/wiki/api\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://www.reddit.com/wiki/api","displaySequence":2},{"id":18,"name":"U.S. Government Works","description":"U.S. Government Works \u003Ca href=\u0022https://www.usa.gov/government-works/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://www.usa.gov/government-works/","displaySequence":3},{"id":28,"name":"EU ODP Legal Notice","description":"EU ODP Legal Notice \u003Ca href=\u0022https://ec.europa.eu/info/legal-notice_en\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://ec.europa.eu/info/legal-notice_en","displaySequence":4}],"displaySequence":5},{"id":5,"name":"Other","licenses":[{"id":11,"name":"Data files \u00A9 Original Authors","description":"Data files \u00A9 Original Authors","displaySequence":1},{"id":12,"name":"Other (specified in description)","description":"Other (specified in description)","displaySequence":2},{"id":4,"name":"Unknown","description":"Unknown","displaySequence":3}],"displaySequence":6}],"owners":[{"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/","profileUrl":"/"},{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb","userTier":"MASTER"}],"overview":"Daily and updated CAC40 stocks from 2010 to 2021","description":"## **CAC40**\n\n\u0026gt; CAC40, previously known as Bourse de Paris, is a benchmark French stock market index. The index represents a capitalization-weighted measure of the 40 most significant stocks among the 100 largest market caps on the Euronext Paris. Its acronym stands for Cotation Assist\u00E9e en Continu, which translates to continuous assisted trading, and is used as a benchmark index for funds investing in the French stock market.\n\nIdeal to : \n* Practise EDA applied to time series\n* Make use of statistical tests to check stationarity (Dickey-Fuller test...)\n* Get more familiar with Akaike information criterion, estimator of out-of-sample prediction error\n* Learn how to tune autoARIMA models\n* Setup a forecasting strategy on stocks\n* Segmentation\n* Identify stress periods specific to an industry\n\n## **References**\n* This dataset is scrapped from a \u003Ca href=\u0022https://markets.businessinsider.com/index/components/cac_40\u0022\u003Efinance website\u003C/a\u003E. It contains all daily CAC40 Stocks from 2010 to 2021.\n* CAC40 \u003Ca href=\u0022https://www.investopedia.com/terms/c/cac40.asp\u0022\u003Edocumentation\u003C/a\u003E\n\n## Enjoy\nHope you can make good use of this dataset\n\n\u0026gt; If you have found some way to educate yourself about engineering, stocks or whatever it is, good employers will have some type of exam or interview and see a sample of your work\n*Bill Gates*","datasetId":588108,"datasetVersionId":2280921,"datasetVersionNumber":17,"lastVersionNumber":17,"datasetUrl":"/bryanb/cac40-stocks-dataset","datasetExternalUrl":"https://kaggle.com/bryanb/cac40-stocks-dataset","originalImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/data-original.jpg?t=2020-04-05-14-57-08","coverImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-cover.jpg?t=2020-04-05-14-57-08","cardImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-card.jpg?t=2020-04-05-14-57-08","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-thumbnail.jpg?t=2020-04-05-14-57-08","license":{"id":1,"name":"CC0: Public Domain","description":"CC0: Public Domain \u003Ca href=\u0022https://creativecommons.org/publicdomain/zero/1.0/\u0022 target=\u0022_blank\u0022\u003E\u003Cspan class=\u0022fa fa-info-circle\u0022/\u003E\u003C/a\u003E","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"voteCount":33,"creatorUserId":754781,"creatorDisplayName":"BryanB","ownerTwitter":"boulebryan","lastUpdated":"2021-05-28T21:28:25.207Z","downloadUrl":"/bryanb/cac40-stocks-dataset/download","newNotebookUrl":"code/scripts/new?datasetVersionId=2280921","newScriptUrl":"code/scripts/new?datasetVersionId=2280921","numberOfViews":5316,"numberOfDownloads":654,"numberOfScripts":4,"numberOfTopics":1,"hideVersionStatuses":true,"cardImageLeft":0,"cardImageTop":0,"cardImageWidth":1079,"cardImageHeight":1079,"coverImageLeft":0,"coverImageTop":157,"coverImageWidth":1916,"coverImageHeight":403,"datasetVersions":[{"id":2280921,"slug":"cac40-stocks-dataset","name":"CAC40 Stocks Dataset \uD83D\uDCC8","creationDate":"2021-05-28T21:28:25.207Z","versionNumber":17,"versionNotes":"up","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-thumbnail.jpg?t=2020-04-05-14-57-08","datasetVersionUrl":"/bryanb/cac40-stocks-dataset/version/17","status":"READY","creator":{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb"},"userSpecifiedSources":"Finance website","databundleVersionId":2322066},{"id":2053530,"slug":"cac40-stocks-dataset","name":"CAC40 Stocks Dataset \uD83D\uDCC8","creationDate":"2021-03-24T12:47:40.247Z","versionNumber":16,"versionNotes":"up","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-thumbnail.jpg?t=2020-04-05-14-57-08","datasetVersionUrl":"/bryanb/cac40-stocks-dataset/version/16","status":"READY","creator":{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb"},"userSpecifiedSources":"Finance website","databundleVersionId":2093603},{"id":1988803,"slug":"cac40-stocks-dataset","name":"CAC40 Stocks Dataset \uD83D\uDCC8","creationDate":"2021-03-02T15:23:51.447Z","versionNumber":15,"versionNotes":"up","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-thumbnail.jpg?t=2020-04-05-14-57-08","datasetVersionUrl":"/bryanb/cac40-stocks-dataset/version/15","status":"READY","creator":{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb"},"userSpecifiedSources":"Finance website","databundleVersionId":2028018},{"id":1941316,"slug":"cac40-stocks-dataset","name":"CAC40 Stocks Dataset \uD83D\uDCC8","creationDate":"2021-02-14T19:16:47.520Z","versionNumber":14,"versionNotes":"up","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-thumbnail.jpg?t=2020-04-05-14-57-08","datasetVersionUrl":"/bryanb/cac40-stocks-dataset/version/14","status":"READY","creator":{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb"},"userSpecifiedSources":"Finance website","databundleVersionId":1979985},{"id":1933443,"slug":"cac40-stocks-dataset","name":"CAC40 Stocks Dataset \uD83D\uDCC8","creationDate":"2021-02-12T00:12:12.370Z","versionNumber":13,"versionNotes":"up","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-thumbnail.jpg?t=2020-04-05-14-57-08","datasetVersionUrl":"/bryanb/cac40-stocks-dataset/version/13","status":"READY","creator":{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb"},"userSpecifiedSources":"Finance website","databundleVersionId":1972059},{"id":1921791,"slug":"cac40-stocks-dataset","name":"CAC40 Stocks Dataset \uD83D\uDCC8","creationDate":"2021-02-08T14:00:26.540Z","versionNumber":12,"versionNotes":"up","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-thumbnail.jpg?t=2020-04-05-14-57-08","datasetVersionUrl":"/bryanb/cac40-stocks-dataset/version/12","status":"READY","creator":{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb"},"userSpecifiedSources":"Finance website","databundleVersionId":1960307},{"id":1921758,"slug":"cac40-stocks-dataset","name":"CAC40 Stocks Dataset \uD83D\uDCC8","creationDate":"2021-02-08T13:48:41.657Z","versionNumber":11,"versionNotes":"update","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-thumbnail.jpg?t=2020-04-05-14-57-08","datasetVersionUrl":"/bryanb/cac40-stocks-dataset/version/11","status":"READY","creator":{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb"},"userSpecifiedSources":"Finance website","databundleVersionId":1960274},{"id":1913260,"slug":"cac40-stocks-dataset","name":"CAC40 Stocks Dataset \uD83D\uDCC8","creationDate":"2021-02-05T21:02:57.723Z","versionNumber":10,"versionNotes":"up","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-thumbnail.jpg?t=2020-04-05-14-57-08","datasetVersionUrl":"/bryanb/cac40-stocks-dataset/version/10","status":"READY","creator":{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb"},"userSpecifiedSources":"Finance website","databundleVersionId":1951710},{"id":1900981,"slug":"cac40-stocks-dataset","name":"CAC40 Stocks Dataset \uD83D\uDCC8","creationDate":"2021-02-01T22:56:20.370Z","versionNumber":9,"versionNotes":"up","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-thumbnail.jpg?t=2020-04-05-14-57-08","datasetVersionUrl":"/bryanb/cac40-stocks-dataset/version/9","status":"READY","creator":{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb"},"userSpecifiedSources":"Finance website","databundleVersionId":1939316},{"id":1822007,"slug":"cac40-stocks-dataset","name":"CAC40 Stocks Dataset \uD83D\uDCC8","creationDate":"2021-01-06T20:08:15.563Z","versionNumber":8,"versionNotes":"cac40","thumbnailImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/588108/1060717/0ef205a10621870d2d873557864474ff/dataset-thumbnail.jpg?t=2020-04-05-14-57-08","datasetVersionUrl":"/bryanb/cac40-stocks-dataset/version/8","status":"READY","creator":{"id":754781,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","profileUrl":"/bryanb","slug":"bryanb"},"userSpecifiedSources":"Finance website","databundleVersionId":1859558}],"datasetVersionTotalCount":17,"type":"FILESET","diffType":"UNVERSIONED","usabilityRating":{"score":0.9117647,"columnDescriptionScore":0.5,"coverImageScore":1,"fileDescriptionScore":0.5,"fileFormatScore":1,"licenseScore":1,"overviewScore":1,"provenanceScore":1,"publicKernelScore":1,"subtitleScore":1,"tagScore":1,"updateFrequencyScore":1},"discussion":{"dataUrl":"/forums/601992/topics.json","id":601992,"subscription":"UNSUBSCRIBE","paramValues":{"page":1,"group":"TOPIC_LIST_GROUP_ALL","sortBy":"TOPIC_LIST_SORT_BY_HOT","category":"TOPIC_LIST_CATEGORY_ALL"}},"newTopic":{"authorType":"TOPIC","forumId":601992,"parentName":"CAC40 Stocks Dataset \uD83D\uDCC8","parentUrl":"/bryanb/cac40-stocks-dataset/discussion"},"categories":{"tags":[{"id":11102,"name":"business","fullPath":"subject \u003E people and society \u003E business","listingUrl":"/datasets?group=public\u0026tagids=11102","description":"Businesses are organizational entities that drive economic activity. Explore the inner workings of things like HR practices, product sales, and customer happiness in these competitions, kernels, and datasets.","datasetCount":27962,"competitionCount":2,"notebookCount":25628,"tagUrl":"/tags/business","displayName":"Business","fontAwesomeIcon":"briefcase"},{"id":11129,"name":"banking","fullPath":"subject \u003E people and society \u003E business \u003E finance \u003E banking","listingUrl":"/datasets?group=public\u0026tagids=11129","description":"Banks keep the financial system interesting by failing en masse every couple of generations.","datasetCount":1424,"competitionCount":9,"notebookCount":720,"tagUrl":"/tags/banking","displayName":"Banking"},{"id":13209,"name":"time series analysis","fullPath":"technique \u003E time series analysis","listingUrl":"/datasets?group=public\u0026tagids=13209","description":"","datasetCount":994,"competitionCount":10,"notebookCount":2151,"tagUrl":"/tags/time-series-analysis","displayName":"Time Series Analysis"},{"id":3100,"name":"europe","fullPath":"geography and places \u003E europe","listingUrl":"/datasets?group=public\u0026tagids=3100","description":"You can find some European linguistic type datasets here as well as other European-like datasets and kernels.","datasetCount":518,"notebookCount":83,"tagUrl":"/tags/europe","displayName":"Europe"},{"id":16589,"name":"datetime","fullPath":"packages \u003E datetime","listingUrl":"/datasets?group=public\u0026tagids=16589","description":"","datasetCount":109,"notebookCount":443,"tagUrl":"/tags/datetime","displayName":"datetime"}],"type":"TAG_TYPE_DATASET"},"upvoteSuggestion":{"voteCount":33,"medalVoteCount":21,"upVoters":[{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3740202-kg.jpg","displayName":"Muril\u00E3o","profileUrl":"/upadorprofzs","tier":"GRANDMASTER","tierInt":4,"userId":3740202,"userName":"upadorprofzs"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3390641-kg.jpg","displayName":"Divyansh Agrawal","profileUrl":"/divyansh22","tier":"MASTER","tierInt":3,"userId":3390641,"userName":"divyansh22"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3390165-kg.jpg","displayName":"Puru Behl","profileUrl":"/accountstatus","tier":"MASTER","tierInt":3,"userId":3390165,"userName":"accountstatus"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3012786-kg.JPG","displayName":"Mar\u00EDlia Prata","profileUrl":"/mpwolke","tier":"MASTER","tierInt":3,"userId":3012786,"userName":"mpwolke"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/2681031-kg.jpg","displayName":"Brenda N","profileUrl":"/brendan45774","tier":"MASTER","tierInt":3,"userId":2681031,"userName":"brendan45774"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/2334083-kg.jpg","displayName":"Marie","profileUrl":"/mariapushkareva","tier":"MASTER","tierInt":3,"userId":2334083,"userName":"mariapushkareva"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/5325169-kg.png","displayName":"Kaito","profileUrl":"/japandata509","tier":"MASTER","tierInt":3,"userId":5325169,"userName":"japandata509"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/761104-kg.jpeg","displayName":"M\u00F6bius","profileUrl":"/arashnic","tier":"MASTER","tierInt":3,"userId":761104,"userName":"arashnic"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/4706661-kg.jpg","displayName":"Taha07","profileUrl":"/taha07","tier":"EXPERT","tierInt":2,"userId":4706661,"userName":"taha07"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/5167254-kg.jpg","displayName":"Orfanakis Konstantinos","profileUrl":"/korfanakis","tier":"EXPERT","tierInt":2,"userId":5167254,"userName":"korfanakis"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/6762435-kg.jpg","displayName":"antoreepjana","profileUrl":"/antoreepjana","tier":"EXPERT","tierInt":2,"userId":6762435,"userName":"antoreepjana"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/5011373-kg.jpg","displayName":"Aditya Sisodiya","profileUrl":"/aditya2803","tier":"EXPERT","tierInt":2,"userId":5011373,"userName":"aditya2803"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/2676111-kg.jpg","displayName":"Prageeth Anjula","profileUrl":"/praanj","tier":"EXPERT","tierInt":2,"userId":2676111,"userName":"praanj"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3565979-kg.jpeg","displayName":"Marco Carujo","profileUrl":"/mcarujo","tier":"EXPERT","tierInt":2,"userId":3565979,"userName":"mcarujo"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3425231-kg.png","displayName":"shubhamshukla","profileUrl":"/shubham9455999082","tier":"EXPERT","tierInt":2,"userId":3425231,"userName":"shubham9455999082"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3302541-kg.JPG","displayName":"Kritik Seth","profileUrl":"/kritikseth","tier":"CONTRIBUTOR","tierInt":1,"userId":3302541,"userName":"kritikseth"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/861666-kg.jpg","displayName":"Darren","profileUrl":"/darren9080","tier":"CONTRIBUTOR","tierInt":1,"userId":861666,"userName":"darren9080"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/4817532-kg.jpg","displayName":"L\u00E9onie Schr\u00F6der","profileUrl":"/lonieschrder","tier":"CONTRIBUTOR","tierInt":1,"userId":4817532,"userName":"lonieschrder"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/6572263-gr.jpg","displayName":"Damien Fournier","profileUrl":"/damienfournier","tier":"CONTRIBUTOR","tierInt":1,"userId":6572263,"userName":"damienfournier"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/5061853-kg.jpg","displayName":"Marty Byrde","profileUrl":"/martybyrde","tier":"CONTRIBUTOR","tierInt":1,"userId":5061853,"userName":"martybyrde"},{"avatarThumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/5061688-kg.jpg","displayName":"Tobias Funke","profileUrl":"/tobiasfunke","tier":"CONTRIBUTOR","tierInt":1,"userId":5061688,"userName":"tobiasfunke"}]},"collaborators":{"owner":{"userId":754781,"profileUrl":"/bryanb","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/754781-kg.jpg","name":"BryanB","slug":"bryanb","userTier":"MASTER","type":"OWNER"}},"canSeeConfigAsCode":true,"canSeeDatasetHashLink":true,"medalUrl":"/static/images/medals/datasets/silverl@2x.png","moderationStatus":"PRIVATED_MODERATION_STATUS_NO_ABUSE","@wf": "Datasets.DatasetDtoWireFormat3"});performance && performance.mark && performance.mark("DatasetContainer.componentCouldBootstrap");</script><script nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: [],
+    });
+</script>
+<script type="text/javascript" nonce="847QPyXL4d8VUaGRLOJ&#x2B;/g==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>

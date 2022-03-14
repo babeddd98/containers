@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-deployment
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db-deployment
+  template:
+    metadata:
+      labels:
+        app: db-deployment
+    spec:
+      containers:
+        - name: database
+          image: mysql:latest
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "hello"
+            - name: MYSQL_DATABASE
+              value: "test-database"
+          ports:
+            - containerPort: 3306
+        
+        - name: adminer
+          image: adminer:latest
+          ports:
+            - containerPort: 8080
+
+# How to deploy services
+# 1 - kubectl apply -f db-test-deployment.yaml
+# 2 - kubectl expose deployment db-test-deployment --type=LoadBalancer --name=db-test-service
+# 3 - kubectl describe service db-test-service
+#  "kubectl get services" to see the external IP of the service
+# "kubectl describe service db-test-service" to see the port exposed by the container (NodePort port-2 for adminer)
+# connect on <external IP>:NodePort
+# for server name on adminer, put the chosen name for the service exposed (here : db-test-service)
+# kubectl describe pod -l app.kubernetes.io/name=db-test-deployment to show informations about the pod created in the deployment
+# kubectl logs -l app.kubernetes.io/name=db-test-deployment -c adminer (for the logs of container adminer, -l is for the label of the pod)

@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-test-pod
+spec:
+  containers:
+    - name: database
+      image: mysql:latest
+      imagePullPolicy: Always
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "hello"
+        - name: MYSQL_DATABASE
+          value: "test-database"
+      ports:
+        - containerPort: 3306
+    
+    - name: adminer
+      image: adminer:latest
+      ports:
+        - containerPort: 8080

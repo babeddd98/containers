@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title></title>
+        <meta charset="utf-8">
+</head>
+<body>
+        <h2>Add an identity to the database</h2><br>
+        <form action="add" method="POST">
+                <label>ID</label>
+                        <p><input type="text" name="id"></p>
+                <label>Name</label>
+                        <p><input type="text" name="name"></p>
+                <label>Sex (0 for female, 1 for male)</label>
+                        <p><input type="text" name="sex"></p>
+                <label>Age</label>
+                        <p><input type="text" name="age"></p>
+                <label>Height (cm)</label>
+                        <p><input type="text" name="height"></p>
+                <label>Nationality</label>
+                        <p><input type="text" name="nationality"></p>
+                <input type="submit" value="Add Identity">
+        </form>
+        <ul>
+                {% for text in all_text %}
+                <li> {{ text[1] }} </li>
+                {% endfor %}
+        </ul>
+        
+</body>
+</html>

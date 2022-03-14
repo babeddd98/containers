@@ -1,0 +1,40 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: test-ingress
+  namespace: dev
+spec:
+  ingressClassName: nginx
+  rules:
+ # - host: 172.26.234.14:31281  # domain name 
+  - http:
+     paths:
+      - pathType: Prefix
+        path: "/mysql"
+        backend:
+          service:
+            name: db-service
+            port:
+             number: 30000
+      - pathType: Prefix
+        path: "/adminer"
+        backend:
+          service:
+            name: db-service
+            port:
+             number: 30001
+      - pathType: Prefix
+        path: "/python"
+        backend:
+          service:
+            name: python-service
+            port:
+             number: 30002
+      - pathType: Prefix
+        path: "/add"
+        backend:
+          service:
+            name: python-service
+            port:
+             number: 30003
+  
